@@ -21,13 +21,14 @@ const showEventsAdmin = function (data) {
 };
 
 const urlApi = "https://soundgarden-api.vercel.app/events";
-const eventList = function (event){
-    fetch(urlApi, {method: "GET", redirect: "follow",})
-    .then((response) => response.json())
-    .then((data) => {
-        showEventsAdmin(data);
-    })
-    .catch((error) => { console.error(error)
-    })
+const eventList = function (event) {
+    fetch(urlApi, { method: "GET", redirect: "follow", })
+        .then((response) => response.json())
+        .then((data) => {
+            showEventsAdmin(data);
+        })
+        .catch((error) => {
+            console.error(error)
+        })
 }
 eventList();
