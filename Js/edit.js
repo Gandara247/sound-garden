@@ -11,10 +11,10 @@ function editEvents() {
         .then(data => {
             let btnEdit = document.getElementsByClassName("btn btn-secondary")
             btnEdit.textContext = data.id;
-            // btnEdit.addEventListener("click", () => {
-            //     console.log(window.location.pathname)
-            //     window.location.href = "editar-evento.html"
-            // })
+            btnEdit.addEventListener("click", () => {
+                console.log(window.location.pathname)
+                window.location.href = "editar-evento.html"
+            })
         })
 
         .catch(error => {
