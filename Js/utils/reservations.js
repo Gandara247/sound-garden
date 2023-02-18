@@ -43,9 +43,9 @@ export const displayModal = function () {
         deleteReservationId();
     };
 
-    const searchReservation = function(idEvent){
-        fetch(urlApiResID + idEvent, 
-            {method: "GET", redirect: "follow",})
+    const searchReservation = function (idEvent) {
+        fetch(urlApiResID + idEvent,
+            { method: "GET", redirect: "follow", })
 
             .then((response) => response.json())
             .then((data) => {
@@ -57,9 +57,34 @@ export const displayModal = function () {
             });
     };
 
-    
-
-
-
-
+    btnOpenModal.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            idEvent = e.target.getAttribute("name");
+            toggleModalAdmin();
+            searchReservation(idEvent);
+        })
+    })
 };
+
+const deleteReservationId = function(){
+    const btnDeleteReservation = document.querySelectorAll("btn-delete-reservation");
+    btnDeleteReservation.forEach((button) => {
+        button.addEventListener("click", (event) =>{
+            let idReservation = event.target.getAttribute("name");
+            console.log(idReservation);
+            deleteReservation(idReservation);
+        })
+    })
+    const deleteReservation = function(idReservation){
+        fetch(urlApiRes + idReservation, {method: "DELETE", 
+        redirect: "follow", headers: 
+        {"Content-Type": "application/json",}
+    })
+    .then((response) => response.text())
+    .then(() => {
+        alert("Deletado com sucesso!!!")
+        window.location.reload()
+    })
+    .catch((error) => console.log("error", error))
+    }
+}
