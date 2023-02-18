@@ -9,7 +9,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="shortcut icon" href="./img/favicon.png type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png type=" image/x-icon">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -112,11 +112,32 @@
                 </div>
             </main>
         </div>
+        <div id="fade-admin" class="hide-admin"></div>
+        <div id="modal-admin" class="hide-admin">
+            <div class="modal-header">
+                <h2 class="container text-center">Reservas</h2>
+                <button class="btn btn-secondary" id="close-modal-admin">
+                    Fechar
+                </button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Número de Ingressos</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody-reservations"></tbody>
+            </table>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
-    <script type="module" src="./Js/listar.js"></script>
+        </script>
+    <script type="module" src="./Js/adminList.js"></script>
 </body>
 
 </html>
