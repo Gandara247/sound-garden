@@ -28,7 +28,7 @@ editEvents();
 function eventUpdate() {
     let paramsUpdate = {
         method: "PUT",
-        body: raw, redirect: "follow"
+        body: "row", redirect: "follow"
     };
     fetch(urlApi, paramsUpdate)
         .then(response => response.text())
