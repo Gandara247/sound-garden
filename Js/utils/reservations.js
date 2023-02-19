@@ -25,7 +25,7 @@ export const displayModal = function () {
         const tBodyReservations = document.querySelector("#tbody-reservations");
 
         for (let i = 0; i < data.length; i++) {
-            const reservation = dara[i];
+            const reservation = data[i];
 
             const reservationsEvents = document.createElement("tr");
             reservationsEvents.innerHTML =

@@ -2,7 +2,7 @@ const urlApi = "https://soundgarden-api.vercel.app/events/"
 
 
 const fillForm = function (data) {
-    const { name, poster, attractions, description, number_tickets } = data;
+    const { name, poster, attractions, description, scheduled, number_tickets } = data;
     document.querySelector("#nome").value = name;
     document.querySelector("#banner").value = poster;
     document.querySelector("#atracoes").value = attractions.join(",  ");

@@ -3,7 +3,7 @@ import { dataLocal } from "./utils/dataToLocal.js";
 import { displayModal } from "./utils/reservations.js";
 
 const eventsAdmin = function (data) {
-    const bodyEvents = document.querySelector("#tbody-eventosadmin");
+    const bodyEvents = document.querySelector("#tbody-eventsadmin");
 
     for (let i = 0; i < data.length; i++) {
         const event = data[i];
