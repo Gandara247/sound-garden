@@ -20,8 +20,9 @@ fNewEvent.addEventListener("submit", function (event) {
 
         .then((response) => response.json())
         .then(() => {
-            window.location.replace("./admin.html");
             alert("O evento foi criado com sucesso!!!");
+            window.location.replace("./admin.html");
+            
         })
         .catch((error) => {
             console.error

@@ -5,7 +5,6 @@ export const readForm = function (inputs, newEvent) {
         if (inputs[i].type !== "submit") {
             if (!inputs[i].value) {
                 alert("Preencha todos os campos para cadastrar");
-                throw new Error("Preencha todos os campos para cadastrar");                
             }
 
             switch (inputs[i].name) {
@@ -23,7 +22,6 @@ export const readForm = function (inputs, newEvent) {
 
                     if (!eventDate.match(rule)) {
                         alert("formato de data e hora aceitos 00/00/0000 00:00.");
-                        throw new Error("formato de data e hora aceitos 00/00/0000 00:00.");
                     }
 
                     newEvent[inputs[i].name] = dateISO8601(eventDate);
