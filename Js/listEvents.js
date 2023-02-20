@@ -24,7 +24,7 @@ const mainEvents = function (data) {
         const event = dateFormat[i]
 
         const eventsMain = document.createElement("article")
-        eventsMain.className = "event-card p-5 m-3"
+        eventsMain.className = "event card p-5 m-3"
         eventsMain.innerHTML = `<h2>${event.name} - ${dataLocal(event.scheduled)}</h2>
                                 <h4>${event.attractions.join(", ")}</h4>
                                 <p>${event.description}</p>

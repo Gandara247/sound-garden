@@ -13,4 +13,3 @@ export const eventPost = function (event) {
         })
         .catch((error) => { console.error(error); });
 };
-
