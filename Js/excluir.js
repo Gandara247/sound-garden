@@ -7,6 +7,7 @@ const fillForm = function (data) {
     document.querySelector("#banner").value = poster;
     document.querySelector("#atracoes").value = attractions.join(",  ");
     document.querySelector("#descricao").value = description;
+    
     document.querySelector("#data").value = dataLocal(scheduled);
     document.querySelector("#lotacao").value = number_tickets;
 }
